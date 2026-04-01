@@ -11,28 +11,25 @@ import SearchIcon from "@/components/navbar/icons/SearchIcon.vue";
   <div class="drawer lg:drawer-open">
     <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content">
-      <nav class="navbar w-full bg-base-300 shadow-sm">
+      <nav class="navbar w-full bg-base-100 shadow-sm">
         <div class="navbar-start">
           <label for="my-drawer-4" aria-label="open sidebar" class="btn btn-square btn-ghost">
-          <MenuIcon />
-        </label>
+            <MenuIcon />
+          </label>
           <div class="px-2 font-bold text-xl">AIFriends</div>
         </div>
-
         <div class="navbar-center w-4/5 max-w-180">
           <div class="join w-4/5">
             <input class="input join-item rounded-l-full w-4/5" placeholder="搜索你感兴趣的内容" />
-            <button class="btn join-item rounded-r-full gap-0!">
+            <button class="btn join-item rounded-r-full gap-0">
               <SearchIcon />
               搜索
             </button>
           </div>
-
         </div>
         <div class="navbar-end">
           <button class="btn btn-ghost text-lg">登录</button>
         </div>
-
       </nav>
       <slot></slot>
     </div>
@@ -59,7 +56,6 @@ import SearchIcon from "@/components/navbar/icons/SearchIcon.vue";
               <span class="is-drawer-close:hidden text-base ml-2 whitespace-nowrap">创作</span>
             </button>
           </li>
-
         </ul>
       </div>
     </div>

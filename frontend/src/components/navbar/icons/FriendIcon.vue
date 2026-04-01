@@ -18,7 +18,6 @@
     <!-- 身体 -->
     <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
   </svg>
-
 </template>
 
 <style scoped>
