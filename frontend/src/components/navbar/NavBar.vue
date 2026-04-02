@@ -30,17 +30,15 @@ const user = useUserStore()
             </button>
           </div>
         </div>
-
         <div class="navbar-end">
-          <RouterLink v-if="user.isLogin()" :to="{name: 'create-index'}"  active-class="btn-active" class="btn btn-ghost text-base mr-6">
+          <RouterLink v-if="user.isLogin()" :to="{name: 'create-index'}" active-class="btn-active" class="btn btn-ghost text-base mr-6">
             <CreateIcon />
             创作
           </RouterLink>
-
-          <RouterLink v-if="!user.isLogin()" :to="{name: 'user-account-login-index'}" active-class="btn-active" class="btn btn-ghost text-lg">
+          <RouterLink v-if="user.hasPulledUserInfo && !user.isLogin()" :to="{name: 'user-account-login-index'}" active-class="btn-active" class="btn btn-ghost text-lg">
             登录
           </RouterLink>
-          <UserMenu v-else />
+          <UserMenu v-else-if="user.isLogin()" />
         </div>
       </nav>
       <slot></slot>
@@ -51,7 +49,7 @@ const user = useUserStore()
       <div class="flex min-h-full flex-col items-start bg-base-200 is-drawer-close:w-16 is-drawer-open:w-54">
         <ul class="menu w-full grow">
           <li>
-            <RouterLink :to="{name: 'homepage-index'}" active-class="menu-focus" class=" is-drawer-close:tooltip is-drawer-close:tooltip-right py-3" data-tip="首页">
+            <RouterLink :to="{name: 'homepage-index'}" active-class="menu-focus" class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3" data-tip="首页">
               <HomepageIcon />
               <span class="is-drawer-close:hidden text-base ml-2 whitespace-nowrap">首页</span>
             </RouterLink>
