@@ -1,6 +1,7 @@
 # AIFriends
 
 一个基于 AI 的社交平台 Web 应用，支持创建 AI 角色、与角色聊天、语音交互等功能。
+链接: https://app7532.acapp.acwing.com.cn/
 
 ## 技术栈
 
